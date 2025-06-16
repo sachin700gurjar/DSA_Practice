@@ -10,12 +10,12 @@ if(len(stack)==0):
     print("stack is empty")
 else:
     print("popped element is :",pop)
-print("\nsearching peak element of stack---")
-peak_element = stack[-1]
+print("\nsearching peek element of stack---")
+peek_element = stack[-1]
 if(len(stack)==0):
     print("stack is empty")
 else:
-    print("peak element is :",peak_element)
+    print("peek element is :",peek_element)
 print("\nprint final stack---")
 print("stack is :",stack)
 
