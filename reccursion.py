@@ -1,12 +1,30 @@
-def is_palindrome(s):
-    if len(s)<=1:
-        return True
-    elif s[0]!=s[-1]:
-        return False
+def fact(n):
+    if n==0 or n==1:
+        return 1 
+    return n *fact(n-1)
+a = fact(5)
+print(a)
+
+def fib(n):
+    if n==0:
+        return 0
+    elif n==1:
+        return 1
     else:
-        return is_palindrome(s[1:-1])
-text = input("Enter a string:").replace(" ","").lower()
-if is_palindrome(text):
-    print("\nstring is palindrome:",text)
-else:
-    print("\nstring is not palindrome:",text)
+        return fib(n-1)+fib(n-2)
+b = fib(10)
+print(b)
+
+def Nsum(n):
+    if n == 1:
+        return 1
+    else:
+        return n+Nsum(n-1)
+c = Nsum(5)
+print(c)
+
+def power(x,n):
+    if n==0:
+        return 1
+    return x*power(x,n-1)
+print(power(4,3))

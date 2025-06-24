@@ -29,7 +29,7 @@ class Dlinkedlist:
             print("position is not valid ")
             return
         if pos == 1:
-            return insert_at_beginning()
+            self.insert_at_beginning()
         else:
             temp = self.head
             count = 1 
@@ -47,6 +47,51 @@ class Dlinkedlist:
             else:
                 self.tail =new_node
             temp.next = new_node
+    def delete_at_beginning(self):
+            if self.head is None:
+                print("List is empty")
+                return
+
+            if self.head.next is None:
+                self.head = self.tail = None
+            else:
+                self.head = self.head.next
+                self.head.prev = None
+    def delete_at_end(self):
+            if self.head is None:
+                print("List is empty")
+                return
+
+            if self.head.next is None:
+                self.head = self.tail = None
+            else:
+                self.tail = self.tail.prev
+                self.tail.next = None
+    def delete_at_position(self, pos):
+            if self.head is None:
+                print("List is empty")
+                return
+
+            if pos == 1:
+                self.delete_at_beginning()
+                return
+
+            temp = self.head
+            count = 1
+            while temp is not None and count < pos:
+                temp = temp.next
+                count += 1
+
+            if temp is None:
+                print("Position out of range")
+                return
+
+            if temp.next is None:
+                self.delete_at_end()
+            else:
+                temp.prev.next = temp.next
+                temp.next.prev = temp.prev
+
     def forward_traversal(self):
         print("forward traversal:")
         temp = self.head
@@ -69,5 +114,10 @@ a.insert_at_specpos(3,40)
 a.insert_at_end(45)
 a.forward_traversal()
 a.backword_traversal()
+a.delete_at_beginning()
+a.delete_at_position(2)
+a.forward_traversal()
+a.backword_traversal()
+
             
         
