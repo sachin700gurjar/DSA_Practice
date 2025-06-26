@@ -1,4 +1,4 @@
-n=4
+from math import *
 # n times star in nXn------
 # for i in range (n):
 #     for j in range(n):
@@ -221,9 +221,46 @@ n=4
 
 # print("digits:",rev)
 # print("\nno. of digits",count)
+# n=36
+# l=[]
+# for i in range(1,int(sqrt(n))+1):
+#     if n%i==0:
+       
+#         l.append(i)
+#         if n/i != i:
+            
+#             l.append(int(n/i))
+# l.sort()
+# print(l)
+# n=int(input())
+# count = 0
+# for i in range (1,n+1):
+#     if n%i==0:
+#         count+=1
+# if count==2:
+#     print("no. is prime")
+# else:
+#     print("no. is not prime")
+# n1=12
+# n2=36
+# gcd=1
 
+# for i in range(1,min(n1,n2)+1):
+#     if n1%i==0 and n2%i==0:
+#         gcd = i
 
-
+# print(gcd)
+a=52
+b=10
+while(a>0 and b>0):
+    if a>b:
+        a=a%b 
+    else:
+        b=b%a 
+if a==0:
+    print(b)
+else:
+    print(a)
 
 
 
