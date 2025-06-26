@@ -1,3 +1,4 @@
+# array reversing methods:
 def reversearr(arr,start,end):
     if start>=end:
         return
@@ -8,6 +9,7 @@ arr=[1,2,3,5,4,2]
 a =reversearr(arr,0,len(arr)-1)
 print(arr)
 print("reverse array",a)
+#another method of reversing array:
 def reversearr(arr):
     if len(arr)==0:
         return []
@@ -17,7 +19,7 @@ arr = [1,2,3,4]
 print(arr)
 a =reversearr(arr)
 print(a)
-
+# Using recursion checking string is palindrome or not:
 def palindrome(s):
     if len(s)<=1:
         return "it is palindrome"
